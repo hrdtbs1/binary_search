@@ -5,12 +5,12 @@ int k;
 int A[100000];
 
 int P(int x){
-    return (long long int);
-    int y;
+    int i,y;
     y=0;
     for(i=0;i<n;i++){
-        y=
+        y=y+(A[i]+x-1)/x;
     }
+    return (long int)y<=k;
 }
 
 
@@ -20,7 +20,17 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  
-
+  lb=0;
+  ub=A[n-1];
+    while(ub-lb>1){
+        int m=(lb+ub)/2;
+        if(P(m)){
+            ub=m;
+        }
+        else{
+            lb=m;
+        }
+    }
+    printf("%d¥n",ub);
   return 0;
 }
