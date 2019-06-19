@@ -21,7 +21,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb=0;
-  ub=A[n-1];
+  ub=1000000000;
     while(ub-lb>1){
         int m=(lb+ub)/2;
         if(P(m)){
@@ -31,6 +31,6 @@ int main(){
             lb=m;
         }
     }
-    printf("%d¥n",ub);
+    printf("%d\n",ub);
   return 0;
 }
