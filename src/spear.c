@@ -8,7 +8,7 @@ int P(int x){
     int i,sum;
     sum=0;
     for(i=0;i<n;i++){
-        sum=sum+A[i]/x;
+        sum+=A[i]/x;
     }
     return (long int) sum>=k;
 }
@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &A[i]);
   }
     lb=0;
-    ub=1000000000;
+    ub=1000000001;
     while(ub-lb>1){
         int m=(lb+ub)/2;
         if(P(m)){

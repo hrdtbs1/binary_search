@@ -10,9 +10,9 @@ int P(int x){
     j=0;
     sum=0;
     for(i=0;i<n;i++){
-        sum=sum+A[i];
+        sum+=A[i];
         if(A[i]>x) return 0;
-        else if(sum>x) {j=j+1,sum=A[i];}
+        else if(sum>x) {j+=1,sum=A[i];}
         }
     return (long int) j<k;
 }
@@ -24,7 +24,7 @@ int main(){
     scanf("%d", &A[i]);
   }
     lb=0;
-    ub=10000;
+    ub=10001;
     while(ub-lb>1){
         int m=(lb+ub)/2;
         if(P(m)){

@@ -8,7 +8,7 @@ int P(int x){
     int i,y;
     y=0;
     for(i=0;i<n;i++){
-        y=y+(A[i]+x-1)/x;
+        y+=(A[i]+x-1)/x;
     }
     return (long int)y<=k;
 }
@@ -21,7 +21,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb=0;
-  ub=1000000000;
+  ub=1000000001;
     while(ub-lb>1){
         int m=(lb+ub)/2;
         if(P(m)){
