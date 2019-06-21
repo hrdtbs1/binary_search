@@ -10,7 +10,7 @@ int P(int x){
     for(i=0;i<n;i++){
         y+=(A[i]+x-1)/x;
     }
-    return (long int)y<=k;
+    return y<=k;
 }
 
 
